@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --secondary: #f1f5f9;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --bg: #ffffff;
+  --text: #1e293b;
+  --radius: 0.75rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--secondary);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.todo-container {
+  background: var(--bg);
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: auto;
+}
+
+.todo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary);
+}
+
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#task-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#task-input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+#task-submit {
+  padding: 0.75rem 1.25rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#task-submit:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.2s;
+}
+
+.filter-btn:hover {
+  background: #e2e8f0;
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-item {
+  background: var(--secondary);
+  padding: 1rem;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.task-item:hover {
+  transform: translateX(4px);
+}
+
+.task-item.completed {
+  background: #d1fae5;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  word-break: break-word;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #065f46;
+}
+
+.complete-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.complete-btn {
+  color: var(--accent);
+}
+
+.delete-btn {
+  color: var(--danger);
+}
+
+.complete-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+.task-item.enter {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.task-item.exit {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 0.75rem;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Modo Oscuro */
+body.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+body.dark .todo-container {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark input,
+body.dark button,
+body.dark .task-item {
+  background-color: #334155;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark .task-item.completed {
+  background: #14532d;
+}
+
+body.dark .task-item.completed .task-text {
+  color: #a7f3d0;
+}
+
+body.dark .filter-btn {
+  color: #f8fafc;
+}
+
+body.dark .filter-btn.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+body.dark #task-submit:hover {
+  background: #1e40af;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  opacity: 0.75;
+  width: 100%;
+}
+
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .social-links img {
+  width: 56px;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer .social-links a:hover img {
+  transform: scale(1.2);
+}
+
+/* Botón modo oscuro */
+#dark-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  color: inherit;
+}

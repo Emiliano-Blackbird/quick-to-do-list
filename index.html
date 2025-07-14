@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Emiliano" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick To-Do List</title>
+  <!-- Fuente Exo -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo:100" />
+  <!-- Font Awesome para iconos -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Estilos de la app -->
+  <link rel="stylesheet" href="src/style.css" />
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4a90e2" />
+  <button id="dark-toggle" aria-label="Alternar modo oscuro">🌙</button>
+</head>
+<body>
+  <section class="todo-container">
+    <h1 class="todo-title">Lista de Tareas</h1>
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-input" placeholder="Agregar nueva tarea..." autocomplete="off" />
+      <button type="submit" id="task-submit">Agregar</button>
+    </form>
+
+    <div class="filters">
+      <button data-filter="all" class="filter-btn active">Todas</button>
+      <button data-filter="pending" class="filter-btn">Pendientes</button>
+      <button data-filter="completed" class="filter-btn">Completadas</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+  </section>
+
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://github.com/Emiliano-Blackbird/quick-to-do-list" target="_blank" aria-label="GitHub repository">
+        <img src="src/img/github.svg" alt="GitHub logo" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="src/main.js"></script>
+</body>
+</html>
