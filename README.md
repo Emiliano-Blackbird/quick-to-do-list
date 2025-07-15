@@ -33,21 +33,20 @@ GitHub Pages Demo: https://emiliano-blackbird.github.io/quick-to-do-list/
 
 ## Cómo usar
 
-1. Cloná el repositorio:
+1. Clona el repositorio:
    ```bash
    git clone https://github.com/Emiliano-Blackbird/quick-to-do-list.git
    cd quick-to-do-list
 
-2. Abrilo en tu navegador:
+2. Abre en tu navegador:
 
-    Solo abrí el index.html desde cualquier servidor local.
+    Solo abre el index.html desde cualquier servidor local.
 
-    O usá Live Server en VS Code.
+    O utiliza Live Server en VS Code.
 
 📲 Instalar como App
 
 Al abrir en tu móvil, se puede instalar como aplicación gracias al soporte de PWA. Ideal para acceso rápido a tus tareas.
-🧠 Autor
 
 ## 👨‍💻 Author
 
