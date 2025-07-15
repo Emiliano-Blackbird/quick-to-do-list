@@ -2,6 +2,8 @@
 
 Una aplicación simple, rápida y responsiva para gestionar tareas diarias. Diseñada con enfoque **Mobile First**, permite agregar, completar, eliminar y filtrar tareas, además de soportar **modo oscuro**.
 
+GitHub Pages Demo: https://emiliano-blackbird.github.io/quick-to-do-list/
+
 ## Características
 
 - ✅ Añadir y eliminar tareas con animaciones
@@ -29,7 +31,7 @@ Una aplicación simple, rápida y responsiva para gestionar tareas diarias. Dise
 ![Quick To-Do List](src/img/screenshot2.png)
 
 
-## 📦 Cómo usar
+## Cómo usar
 
 1. Cloná el repositorio:
    ```bash
@@ -47,5 +49,9 @@ Una aplicación simple, rápida y responsiva para gestionar tareas diarias. Dise
 Al abrir en tu móvil, se puede instalar como aplicación gracias al soporte de PWA. Ideal para acceso rápido a tus tareas.
 🧠 Autor
 
-Desarrollado por Emiliano
-GitHub: Emiliano-Blackbird
+## 👨‍💻 Author
+
+    Emiliano Perez Paponi
+    Full Stack Developer
+    GitHub: @Emiliano-Blackbird
+    Mail: EmilianoPerezPaponi@gmail.com
